@@ -6,12 +6,12 @@
         <!-- Experience -->
         <div class="mb-12">
           <h3 class="text-2xl font-semibold mb-6">Work Experience</h3>
-          <div v-for="job in experience" :key="job.company" class="mb-8">
+          <div v-for="job in experience" :key="job.id" class="mb-8">
             <div class="flex justify-between items-center mb-2">
-              <h4 class="text-xl font-medium">{{ job.title }}</h4>
-              <span class="text-gray-600">{{ job.period }}</span>
+              <h4 class="text-xl font-bold">{{ job.title }}</h4>
+              <!-- <span class="text-gray-600">{{ job.company }}</span> -->
             </div>
-            <p class="text-gray-700 mb-2">{{ job.company }}</p>
+            <h5 class="text-gray-700 font-medium mb-2">{{ job.role }}</h5>
             <ul class="list-disc list-inside text-gray-600">
               <li v-for="(achievement, index) in job.achievements" :key="index">
                 {{ achievement }}
@@ -36,37 +36,70 @@
 <script setup>
 const experience = ref([
   {
-    title: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    period: "2021 - Present",
+    id: 1,
+    title: "Front-End Development",
+    // company: "Tech Solutions Inc.",
+    // period: "2021 - Present",
+    role: "Responsiblities:",
     achievements: [
-      "Led development of microservices architecture",
-      "Improved application performance by 40%",
-      "Mentored junior developers",
+      "Designing user-friendly and responsive interfaces",
+      "Ensuring cross-browser compatibility.",
+      "Implementing interactive features and dynamic content.",
+      "Integrating front-end with back-end functionality.",
+      "Optimizing performance and user experience (UX).",
     ],
   },
   {
-    title: "Full Stack Developer",
-    company: "Digital Innovations Ltd",
-    period: "2019 - 2021",
+    id: 2,
+    title: "Back-End Development",
+    // company: "Digital Innovations Ltd",
+    // period: "2019 - 2021",
+    role: "Responsiblities:",
     achievements: [
-      "Developed e-commerce platform with 100k+ users",
-      "Implemented CI/CD pipeline",
-      "Reduced server costs by 30%",
+      "Building server-side logic and database interactions.",
+      "Creating RESTful APIs for communication between client and server.",
+      "Handling user authentication and authorization.",
+      "Ensuring data security and server scalability.",
+      "Managing databases (SQL or NoSQL) and integrating them into front-end applications.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Database Management:",
+    // company: "Digital Innovations Ltd",
+    // period: "2019 - 2021",
+    role: "Responsiblities:",
+    achievements: [
+      "Designing, managing, and maintaining databases.",
+      "Writing efficient queries to retrieve and manipulate data.",
+      "Ensuring data integrity and optimization.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Devops & Deployment",
+    // company: "Digital Innovations Ltd",
+    // period: "2019 - 2021",
+    role: "Responsiblities:",
+    achievements: [
+      "Setting up and managing deployment pipelines",
+      "Automating deployment processes.",
+      "Handling cloud-based infrastructure and hosting.",
+      "Ensuring seamless integration and delivery of features.",
     ],
   },
 ]);
 
 const education = ref([
   {
-    degree: "Master of Computer Science",
-    school: "Tech University",
-    period: "2017 - 2019",
+    degree: "High School",
+    school: "Sulaimanyh Preparatory School",
+    period: "1998 - 2001",
   },
   {
-    degree: "Bachelor of Computer Science",
-    school: "State University",
-    period: "2013 - 2017",
+    degree: "Deploma",
+    school: "Sulaimany Technical Institutes",
+    period: "2001 - 2003",
   },
 ]);
 </script>
